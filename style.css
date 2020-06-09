@@ -373,11 +373,11 @@ footer p{
     }
 
     .title-text h2{
-        font-size:2rem;
+        font-size:2rem !important;
     }
 
     .title-text h1{
-        font-size:3.5rem;
+        font-size:4rem !important;
     }
 
     .about-me__container{
