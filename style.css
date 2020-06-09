@@ -42,6 +42,7 @@ nav ul{
     list-style: none;
     margin-right: 1em;
     padding:0;
+    margin-bottom:0;
 }
 
 nav li{
