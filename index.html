@@ -20,9 +20,9 @@
     
             <nav>
                 <ul>
-                    <li><a href="#">Projects</a></li>
-                    <li><a href="#">Blog</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <!-- <li><a href="#">Blog</a></li> -->
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
         </div>
@@ -42,68 +42,75 @@
 
         <div class="about-me__container">
             <img src="images/about-me.jpeg" alt="A picture of Jacob in a white t-shirt outdoors.">
+
             <div class="about-me__text">
                 <h2>Hi I'm Jacob.</h2>
                 <p>I'm a front end web developer based in London, UK.</p>
                 <p>I love designing websites and making them look good. If I'm not building something for a client, I'm coding for fun and learning new technologies.</p>
-                <p>I know <strong>HTML, CSS</strong> and <strong>JavaScript (ES6)</strong>. I also use jQuery and SCSS to speed up my projects sometimes. I'm always excited about learning new languages; I'm currently learning React and I'm looking to add back-end languages to my tool-kit later this year.</p>
+                <p>I know <strong>HTML, CSS</strong> and <strong>JavaScript (ES6)</strong>. I also use <strong>jQuery</strong> and <strong>SCSS</strong> to speed up my projects sometimes. I'm always excited about learning new languages; I'm currently learning React and I'm looking to add back-end languages to my tool-kit later this year.</p>
                 <p>My interests are multi-faceted; graphic design, web design, and animation occupy most of my spare time. When I'm away from the desktop you'll most likely find me playing chess, tennis, cycling in the great outdoors, or reading sci-fi novels. </p>
             </div>
+
         </div>
         
     </section>
 
-    <section class="projects">
-        <h2>Projects</h2>
-            <div class="projects__container">
+    <section class="projects" id="projects">
+        <div class="projects__container">
+            
+            <div class="title">
+                <h2>Projects</h2>
+            </div>
+            <div class="project-grid">
 
-                <div class="project">
-                    <h3>Project 1</h3>
-                    <div class="project-example__container">
-                        <a href="#"><img src="images/chess-site-resize.png" alt="Image of chess-app project."></a>
-                        <div class="overlay">
-                            <div class="text">
-                                An app designed to improve speed and accuracy on the chess board. <br>
-                                Built with HTML, CSS & JavaScript.
+                        <div class="project">
+                            <h3>Weather App</h3>
+                            <div class="project-example__container">
+                                <a href="#"><img src="images/weather-app.png" alt="Image of weather-app project."></a>
+                                <div class="overlay">
+                                    <div class="text">
+                                        A weather app built using JavaScript and the fetch API to present current temperature and sunrise/sunset data for a user entered location.
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </div>
+            
+            
+                            <div class="project">
+                                <h3>Chess Trainer</h3>
+                                <div class="project-example__container">
+                                    <a href="#"><img src="images/chess-site-resize.png" alt="Image of chess-app project."></a>
+                                    <div class="overlay">
+                                        <div class="text">
+                                            An app designed to improve speed and accuracy on the chess board. <br>
+                                            Built with HTML, CSS & JavaScript.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>        
+                            
+                    
+                            <div class="project">
+                                <h3>JS Calculator</h3>
+                                <div class="project-example__container">
+                                    <a href="#"><img src="images/js-calculator.png" alt="Image of js-calculator project."></a>
+                                    <div class="overlay">
+                                        <div class="text">
+                                            A simple calculator built using vanilla JavaScript.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
 
-                
-                <div class="project">
-                    <h3>Project 2</h3>
-                    <div class="project-example__container">
-                        <a href="#"><img src="images/weather-app.png" alt="Image of weather-app project."></a>
-                        <div class="overlay">
-                            <div class="text">
-                                A weather app built using JavaScript and the fetch API to present current temperature and sunrise/sunset data for a user entered location.
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                
-                <div class="project">
-                    <h3>Project 3</h3>
-                    <div class="project-example__container">
-                        <a href="#"><img src="images/js-calculator.png" alt="Image of js-calculator project."></a>
-                        <div class="overlay">
-                            <div class="text">
-                                A simple calculator built using vanilla JavaScript.
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            </div>
                 
             </div>
     </section>
 
-    <section class="contact">
-        <h2>Get In Touch</h2>
+    <section class="contact" id="contact">
         <div class="contact__container">
-            <p>You can follow my projects on Github, or my doodles on Codepen to see what I'm up to. <br>
-            Want to know more? Drop me a message via email, Twitter, or LinkedIn.</p>
+            <h2>Get In Touch</h2>
+            <p>Want to know more? You can follow my projects on Github, or my doodles on Codepen to see what I'm up to. You can also drop me a message via email, Twitter, or LinkedIn.</p>
         </div>
         <div class="social-nav">
             <a href="https://www.linkedin.com/in/jacobcollinsdev/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
@@ -114,12 +121,14 @@
         </div>
     </section>
 
+    <button class="topBtn"><i class="fas fa-chevron-up"></i></button>
+
     <footer>
         <p>Website designed by jacobcollins &copy; 2020</p>
     </footer>
 
-
-
+    <script src="jquery-3.5.1.min.js"></script>
+    <script src="script.js"></script>
     
 </body>
 </html>
