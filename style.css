@@ -70,6 +70,7 @@ nav a {
     height:2px;
     width:3em;
     border-radius:2px;
+    transition:0.5s;
 }
 
 .nav-toggle-label span::before,.nav-toggle-label span::after{
@@ -94,6 +95,18 @@ nav a {
     transition:opacity 250ms ease-in-out 250ms;
 }
 
+.nav-toggle:checked ~ .nav-toggle-label span{
+    transform:rotate(45deg);
+}
+
+.nav-toggle:checked ~ .nav-toggle-label span::before{
+    transform:rotate(90deg)translateX(7px);
+}
+
+.nav-toggle:checked ~ .nav-toggle-label span::after{
+    opacity:0;
+}
+
 label{
     cursor: pointer;
     margin:0;
@@ -107,11 +120,11 @@ header a{
 
 header{
     position:relative;
-    background:#1e1e1e;
+    background:white;
     height:100vh;
+    display:flex;
+    flex-direction: column;
 }
-
-
 
 
 
@@ -123,9 +136,37 @@ header{
 
 h1, h2 {
     font-family: var(--font-primary);
+    color:rgb(51, 51, 51);
+
 }
 
-.title-image img{
-    border-radius:50%;
-    height:400px;
+.title-text img{
+    height:200px;
+}
+
+.title-text{
+    height:100%;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.title-text h2{
+    margin:0;
+    font-size: 3rem;
+}
+
+.title-text h1{
+    font-size: 5rem;
+    margin-top:0.5rem;
+}
+
+.fa-chevron-down{
+    position:absolute;
+    left:50%;
+    top:93%;
+    transform:translate(-50%,-50%);
+    color:black;
+    font-size:2rem;
 }
