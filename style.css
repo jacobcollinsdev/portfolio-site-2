@@ -199,7 +199,7 @@ h1, h2 {
 
 .about-me{
     background:#1e1e1e;
-    color:rgb(177, 177, 177);
+    color:rgb(194, 194, 194);
     display:flex;
     align-items: center;
     justify-content: center;
@@ -223,6 +223,7 @@ h1, h2 {
 
 .about-me__text h2 {
     text-align: center;
+    color:rgb(223, 223, 223);
 }
 
 .about-me__text p{
@@ -278,11 +279,15 @@ h1, h2 {
 
 .contact{
     background:#1e1e1e;
-    color:rgb(177, 177, 177);
+    color:rgb(194, 194, 194);
     display:flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+}
+
+.contact__container h2{
+    color:rgb(223, 223, 223);
 }
 
 .contact__container{
