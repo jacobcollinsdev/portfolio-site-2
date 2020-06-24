@@ -5,7 +5,7 @@ $(".fa-chevron-down").click(function(){
 
 
 $(window).scroll(()=>{
-    if($(this).scrollTop() > 300){
+    if($(this).scrollTop() > 50){
         $(".topBtn").fadeIn();
     } else{
         $(".topBtn").fadeOut();
@@ -14,6 +14,6 @@ $(window).scroll(()=>{
 
 
 $(".topBtn").click(()=>{
-    $('html, body').animate({scrollTop : 0}, 500);
+    $('html, body').animate({scrollTop : 0}, 200);
 })
 

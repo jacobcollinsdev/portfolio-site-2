@@ -334,14 +334,16 @@ footer p{
     bottom:2.5em;
     right:1.5em;
     font-size:1.2rem;
-    width:50px;
-    height:50px;
-    border-radius: 50%;
     border:none;
+    display:none;
+}
+
+.fa-chevron-up{
     background:#ff6b81;
     color:white;
     cursor: pointer;
-    display:none;
+    border-radius: 50%;
+    padding:1em;
 }
 
 @media screen and (min-width:800px){
@@ -406,7 +408,7 @@ footer p{
 
     .project-grid{
         display:grid;
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
         gap: 1em;
     }
 
@@ -429,7 +431,7 @@ footer p{
         height:100%;
         width:100%;
         opacity:0;
-        background-color:rgba(0,0,0,0.5);
+        background-color:rgba(0,0,0,0.75);
         transition:0.5s ease-in;
         pointer-events: none;
     }
@@ -444,6 +446,8 @@ footer p{
         width:100%;
         color:white;
         pointer-events: none;
+        padding-left:1em;
+        padding-right:1em;
     }
 
     .project-example__container:hover .overlay{
