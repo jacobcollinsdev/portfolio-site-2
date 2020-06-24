@@ -113,11 +113,11 @@ nav a {
 }
 
 .nav-toggle:checked ~ .nav-toggle-label span{
-    transform:rotate(45deg);
+    transform:rotate(405deg);
 }
 
 .nav-toggle:checked ~ .nav-toggle-label span::before{
-    transform:rotate(90deg)translateX(7px);
+    transform:rotate(455deg)translateX(7px);
 }
 
 .nav-toggle:checked ~ .nav-toggle-label span::after{
