@@ -234,7 +234,7 @@ h1, h2 {
     width:min(80%,300px);
     margin-top:2em;
     margin-bottom:0;
-    filter:grayscale()
+    filter:grayscale();
 } 
 
 /* Projects */
