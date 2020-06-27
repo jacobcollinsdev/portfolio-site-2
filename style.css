@@ -232,7 +232,7 @@ h1, h2 {
 
 .about-me__container img{
     width:80%;
-    max-width:300px;
+    max-width:350px;
     margin-top:2em;
     margin-bottom:0;
     filter:grayscale();
