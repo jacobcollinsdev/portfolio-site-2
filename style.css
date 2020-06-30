@@ -441,10 +441,13 @@ footer p{
     padding-bottom: 1em;
 }
 
-
 .link{
     text-decoration: underline;
     color:gray;
+}
+
+.p-list{
+    margin-top: 0;
 }
 
 .video-container {
