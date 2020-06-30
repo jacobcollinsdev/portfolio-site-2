@@ -15,9 +15,14 @@ html{
 
 p {
     line-height: 150%;
+    font-size: 1.2rem;
 }
 
 a{text-decoration: none;}
+
+h1{
+    font-size:2.3rem;
+}
 
 h2{
     font-size:2rem;
@@ -28,6 +33,8 @@ body{
     padding:0;
     font-family: var(--font-secondary);
     color:black;
+    position: relative;
+    min-height: 100vh;
 }
 
 .nav-container{
@@ -129,8 +136,6 @@ label{
     margin:0;
 }
 
-
-
 header a{
     color:rgb(212, 212, 212);
     font-size:1.2rem;
@@ -140,15 +145,13 @@ header a:hover{
     color:white;
 }
 
-header{
+.intro-header{
     position:relative;
     background:white;
     height:100vh;
     display:flex;
     flex-direction: column;
 }
-
-
 
 .logo{
     margin-left:1em;
@@ -195,6 +198,17 @@ h1, h2 {
     cursor: pointer;
 }
 
+.container{
+    display:flex;
+    flex-direction: column;
+    /* align-items: center;
+    justify-content: center; */
+    max-width:900px;
+    margin-left:10%;
+    margin-right:10%;
+    padding-bottom: 5em;
+}
+
 /* About Me */
 
 .about-me{
@@ -210,7 +224,10 @@ h1, h2 {
     flex-direction: column;
     justify-content: center;
     align-items:center;
-    width:min(80%,800px);
+    /* width:min(80%,800px); */
+    max-width:900px;
+    margin-left:10%;
+    margin-right:10%;
 }
 
 .about-me__text{
@@ -240,7 +257,7 @@ h1, h2 {
 
 /* Projects */
 
-.projects{
+.projects, .blog-items{
     display:flex;
     flex-direction:column;
     align-items: center;
@@ -248,7 +265,10 @@ h1, h2 {
 }
 
 .projects__container{
-    width:min(80%, 800px);
+    /* width:min(80%, 800px); */
+    max-width:900px;
+    margin-left:10%;
+    margin-right:10%;
 }
 
 .project-example__container a img{
@@ -285,6 +305,7 @@ h1, h2 {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    padding-bottom: 4em;
 }
 
 .contact__container h2{
@@ -294,7 +315,10 @@ h1, h2 {
 .contact__container{
     display:flex;
     flex-direction:column;
-    width:min(80%, 800px);
+    /* width:min(80%, 800px); */
+    max-width:900px;
+    margin-left:10%;
+    margin-right:10%;
 }
 
 .contact__container p {
@@ -306,6 +330,9 @@ h1, h2 {
     flex-wrap: wrap;
     text-align: center;
     margin-bottom:2em;
+    margin-left:10%;
+    margin-right:10%;
+    max-width:900px;
 }
 
 .fab, .far{
@@ -322,6 +349,9 @@ h1, h2 {
 footer{
     background:#000;
     color:rgb(177, 177, 177); 
+    position: absolute;
+    bottom:0;
+    width: 100%;
 }
 
 footer p{
@@ -337,6 +367,7 @@ footer p{
     font-size:1.2rem;
     border:none;
     display:none;
+    z-index:100;
 }
 
 .fa-chevron-up{
@@ -345,6 +376,98 @@ footer p{
     cursor: pointer;
     border-radius: 50%;
     padding:1em;
+}
+
+.card{
+    display: block;
+    background:#f1f1f1;
+    padding:1em;
+    border-radius:10px;
+    margin-bottom:2em;
+    overflow-y: hidden;
+    text-overflow: ellipsis;
+}
+
+.card:first-of-type{
+    margin-top: 2em;
+}
+
+.card h2{
+    margin-bottom: 10px;
+    text-align: center;
+    line-height: 120%;
+}
+
+.card h3{
+    margin-top: 0;
+    text-align: center;
+}
+
+.blog-link{
+    text-decoration: none;
+    color:black;
+}
+
+.blog-link:hover .card{
+    opacity:0.75;
+}
+
+.container h1, .container h2, .container h3{
+    text-align: center;
+}
+
+.container h1{
+    margin-bottom: 0;
+}
+
+.container h3:first-of-type{
+    text-align: center;
+}
+
+.container h3{
+    text-align: left;
+    margin-bottom: 0;
+    font-size: 1.4rem;
+}
+
+.container p{
+    text-align: left;
+}
+
+.container li{
+    font-size: 1.2rem;
+    padding-left:0;
+    line-height: 150%;
+    padding-bottom: 1em;
+}
+
+
+.link{
+    text-decoration: underline;
+    color:gray;
+}
+
+.video-container {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-top: 56.25%;
+}
+.video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.container ul{
+    list-style: none;
+    padding:0;
+}
+
+.focus{
+    font-size:1.4rem;
 }
 
 @media screen and (min-width:800px){
@@ -454,6 +577,5 @@ footer p{
     .project-example__container:hover .overlay{
         opacity:1;
     }
-
 
 }
