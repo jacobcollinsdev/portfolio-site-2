@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ=" crossorigin="anonymous" />
+    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.png">
+    <title>Build Your Own Website From Scratch (Part 1) | jacobcollinsdev</title>
+    <meta name="description" content="Jacob Collins is a Front-End Web Developer who designs and codes beautiful websites with clean user-interfaces.">
+</head>
+<body>
+
+    <header>
+        <div class="nav-container">
+            <a href="/" class="logo">&lt;jacobcollinsdev&gt;</a>
+    
+            <input type="checkbox" id="nav-toggle" class="nav-toggle">
+            <label for="nav-toggle" class="nav-toggle-label">
+                <span></span>
+            </label>
+    
+            <nav>
+                <ul>
+                    <li><a href="../../index.html#projects">Projects</a></li>
+                    <li><a href="../../blog.html">Blog</a></li>
+                    <li><a href="../../index.html#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+
+    </header>
+
+    <section class="blog-items">
+        <div class="container">                    
+            <h1>Build Your Own Website From Scratch Using HTML and CSS - Part 2</h1>
+            <h3>July 30th 2020</h3>
+            <img class="blog-banner" src="images/image2.png" alt="title-image">
+
+            <p class="focus">In <a class="link" href="build-your-own-website-1.html">Part 1</a> of this tutorial, we built a very simple webpage using HTML. Now we're going to use CSS to give some visual appeal to our site and make it look great.</p>
+            
+            <h3>Contents</h3>
+            <ul class="contents">
+                <li><a href="#css-recap">CSS Recap</a></li>
+                <li><a href="#style-tag">1. Adding the &lt;style&gt; Tag</a></li>
+                <li><a href="#style-body">2. Styling the &lt;body&gt;</a></li>
+                <li><a href="#create-html-file">1. Creating the HTML File</a></li>
+                <li><a href="#setup-html">2. Setting up the HTML</a></li>
+                <li><a href="#head-tag">3. The &lt;head&gt; Tag</a></li>
+                <li><a href="#add-content">4. Adding Content</a></li>
+                <li><a href="#add-images">5. Adding Images</a></li>
+            </ul>
+
+            <h3 id="css-recap">CSS Recap</h3>
+            <p>Remember that CSS is a stylesheet lanuage and stands for "Cascading Style Sheets". This essentially means that the styles we apply "cascade" through the entire document and apply to all elements we've selected until they're overridden. <br><br>
+            We declare our styles using <em>CSS rules</em>. These consist of a <em>selector</em>, a <em>property</em>, and a <em>value</em>. Let's have a look at the example for Part 1 again:
+            </p>
+
+            <div class="code">
+                <code><strong>
+                    p { <br>
+                    &nbsp;&nbsp;font-size: 20px; <br>
+                    }
+                </strong></code>
+            </div>
+
+            <p>The above is an example of a CSS rule for styling paragraph elements. <br><br>
+            In this case, the <em>selector</em> is the <em>p</em> element. <br><br>
+            The <em>property</em> we want to style is the <em>font-size</em>. <br><br>
+            The <em>value</em> we want to assign to the font-size is <em>20px</em> (px is short for "pixels"). <br><br>
+            Now all our paragraph elements will have a font-size of 20px. There's so many properties that we can style with CSS and in this tutorial we are going to touch on the basics. If you're hungry for more, have a look at the resources listed at the end. <br><br>
+            Now we've recapped CSS, let's get started styling the webpage we created in Part 1!
+            </p> 
+
+            <h3 id="style-tag">1. Adding the &lt;style&gt; Tag</h3>
+            <p>The first thing we need to do is add the &lt;style&gt; tag. This is one of a few ways to reference our styling declarations. Another way to do it would be to create a separate file named <em>style.css</em> and then link it to our HTML file, but for the purposes of this tutorial we are going to declare it all in our <em>index.html</em> document. <br><br>
+            The &lt;style&gt; tag goes inside our &lt;head&gt; tag as shown below:            
+            </p>
+
+            <div class="img-alert">
+                <img src="images/part-2/style-tag.png" alt="The style tag goes within the head tag.">
+            </div>
+            
+            <h3 id="style-body">2. Styling the &lt;body&gt;</h3>
+            <p>To get started, let's give our page background and text a different colour.</p>
+            
+
+
+            <p>If this article was useful to you, let me know on <a href="https://twitter.com/jacobcollinsdev" target="_blank"><u><em>Twitter!</em></u></a><br>
+            <em>@jacobcollinsdev</em>.</p>
+
+
+           
+
+        </div>
+    </section>
+
+
+    <div class="topBtn"><i class="fas fa-chevron-up"></i></div>
+
+    <footer>
+        <p>Website designed by jacobcollins &copy; 2020</p>
+    </footer>
+
+    <script src="../../jquery-3.5.1.min.js"></script>
+    <script src="../../script.js"></script>
+    
+</body>
+</html>

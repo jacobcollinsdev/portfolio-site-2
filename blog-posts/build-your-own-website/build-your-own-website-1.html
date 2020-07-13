@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ=" crossorigin="anonymous" />
+    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.png">
+    <title>Build Your Own Website From Scratch (Part 1) | jacobcollinsdev</title>
+    <meta name="description" content="Jacob Collins is a Front-End Web Developer who designs and codes beautiful websites with clean user-interfaces.">
+</head>
+<body>
+
+    <header>
+        <div class="nav-container">
+            <a href="/" class="logo">&lt;jacobcollinsdev&gt;</a>
+    
+            <input type="checkbox" id="nav-toggle" class="nav-toggle">
+            <label for="nav-toggle" class="nav-toggle-label">
+                <span></span>
+            </label>
+    
+            <nav>
+                <ul>
+                    <li><a href="../../index.html#projects">Projects</a></li>
+                    <li><a href="../../blog.html">Blog</a></li>
+                    <li><a href="../../index.html#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+
+    </header>
+
+    <section class="blog-items">
+        <div class="container">                    
+            <h1>Build Your Own Website From Scratch Using HTML and CSS - Part 1</h1>
+            <h3>July 30th 2020</h3>
+            <img class="blog-banner" src="images/image1.jpg" alt="title-image">
+
+            <p class="focus">This tutorial is aimed at those who have never written a single line of code in their life.  No fancy software required, all you'll need is a text editor. If you're using Windows, you can use Notepad. If you're using Mac then you can use TextEdit.<br/><br/>
+            In Part 1 we're going to build the structure of our site using HTML, and in Part 2 we're going to make it look great using CSS. <br><br>
+            Let's get started!</p>
+            
+            <h3>Contents</h3>
+            <ul class="contents">
+                <li><a href="#how-it-works">How Does It All Work?</a></li>
+                <li><a href="#html">What is HTML?</a></li>
+                <li><a href="#css">What is CSS?</a></li>
+                <li><a href="#create-html-file">1. Creating the HTML File</a></li>
+                <li><a href="#setup-html">2. Setting up the HTML</a></li>
+                <li><a href="#head-tag">3. The &lt;head&gt; Tag</a></li>
+                <li><a href="#add-content">4. Adding Content</a></li>
+                <li><a href="#add-images">5. Adding Images</a></li>
+            </ul>
+
+            <h3 id="how-it-works">How Does It All Work?</h3>
+            <p>Have you ever wondered how webpages are created? How does your browser know what to display to you, the end-user, when you type in the URL of a page you want to visit? <br/><br/>
+            The answer lies in the fact that your browser is interpreting a number of text files that contain all the instructions required to correctly display the website. There are typically 3 main technologies that are used to power the web:
+            </p>
+            <ol>
+                <li>HTML - adds content and structure to your website (i.e. Header, navigation bar, main content, and footer).</li>
+                <li>CSS - adds styles to your website (i.e. Colours, formatting, fonts, etc).</li>
+                <li>JavaScript - adds functionality to your website (i.e. User-driven interactive events such as search bars, games and login buttons).</li>
+            </ol>
+            <p>HTML and CSS are known as mark-up languages and stylesheet languages, respectively. You could make a website using just HTML, but without CSS it would be incredibly boring and wouldn't attract new visitors. HTML provides the structure and content for your webpage, whereas CSS applies all the styles you need to make it visually appealing. The image below gives a visual representation of a website made with and without CSS.</p>
+            
+            <div class="blog-images">
+                <div class="image">
+                    <img src="images/without-css.png" alt="Amazon website without CSS">
+                    <p><strong>Without CSS</strong></p>
+                </div>
+                <div class="image">
+                    <img src="images/with-css.png" alt="Amazon website with CSS">
+                    <p><strong>With CSS</strong></p>
+                </div>
+            </div>
+
+            <p>Notice that without CSS, all text is rendered in the default font family with a default font-size and colour. The background colour for all elements is white, and the images are their default sizes. Also notice the horizontal scroll bar that has appeared, showing that some page elements too big for the browser viewport. <br><br>
+
+            HTML and CSS alone are enough to make a perfectly functional website that will look great, but the use of JavaScript can take things to the next level by adding interactivity and improving the user's experience.
+            </p>
+
+            <h3 id="html">What is HTML?</h3>
+            <p>HTML stands for "Hypertext Markup Language". As mentioned above, this is the language that's used to add content and structure to your website. HTML consists of elements which are stored inside something called "tags". These tags, denoted by "&lt;" and "&gt;" brackets, provide information about what kind of element it is. Most tags require an opening and closing tag, as you'll see below. For example, a paragraph tag populated with some text looks like this: </p>
+
+            <div class="code">
+                <code><strong>
+                &lt;p&gt;This is some paragraph text.&lt;/p&gt;</strong></code>
+            </div>   
+
+            <p>
+            In the above example, the &lt;p&gt; tag tells the browser that this is a paragraph element. Note that the closing tag, &lt;/p&gt;, contains a forward slash after the &lt; symbol which denotes that we are closing the p tag. It's important that you include a closing tag after your content, otherwise your browser will interpret the rest of your code as a paragraph element. <br><br>
+                
+            As we move through this tutorial, you will see examples of other tags we can use to add content and everything we use will be explained along the way. <br><br>
+            </p>
+
+            <h3 id="css">What is CSS?</h3>
+            <p>
+            CSS stands for "Cascading Style Sheets" and uses a concept called inheritance that will enable us to apply styles to all elements of a certain type just by defining the style once. For example, if I wanted my all my paragraphs to have a font-size of 20px (the default font is usually 16px in most browsers), I would apply the following code: </p>
+
+            <div class="code">
+                <code><strong>
+                    p { <br>
+                    &nbsp;&nbsp;font-size: 20px; <br>
+                    }
+                </strong></code>
+            </div>
+            
+            <p>
+            Now, whenever I add a new paragraph, it will have a font-size of 20px. The code above is what's known as a CSS rule. It consists of a selector (the element we're selecting, in this case the p element), a property (in this case 'font-size'), and a value (20px). <br><br>
+
+            By applying CSS rules to HTML elements, we can style a webpage and make them look great. As we move through the tutorial we'll discover different properties we can apply, and these will be explained as we move along. <br><br>
+
+            Without further ado, let's get started!</p>
+
+            <h3 id="create-html-file">1. Creating the HTML File</h3>
+            <p>First of all, let's create a new folder called "My Website". Within this, we want to create a new text file by right-clicking the empty space, then New, then Text Document. Name this file "index.html". <br><br> 
+
+
+            Note: You may get the following notification:</p>
+
+            <div class="img-alert">
+                <img src="images/file-warning.png" alt="File warning alert">
+            </div>
+
+            <p>Just click "Yes" and continue on. Your folder should look like this:</p>
+            
+            <div class="img-alert">
+                <img src="images/folder-view.png" alt="Image of folder containing html file">
+            </div>
+
+            <p>Right click on the "index.html", then "Open with", and then "Notepad". If you can't see Notepad among the list of available apps, select "Choose another app" and you should be able to find it there.</p>
+
+            <h3 id="setup-html">2. Setting up the HTML</h3>
+            <p>Copy the following text, exactly as written into your HTML file:</p>
+
+            <div class="img-alert">
+                <img src="images/html-template.png" alt="HTML file template">
+            </div>
+
+            <p>Take note of what tags we have: <br><br>
+                
+                <strong>&lt;!DOCTYPE html&gt;</strong><br> The !DOCTYPE tag tells the browser what version of HTML we are using. We'll be using HTML5, which in this case is represented just as 'html'. This part is important because as new versions of HTML are released, some tags are no longer accepted, so we have to tell the browser what standard we are coding to. This does not have a closing tag. <br><br>
+                
+                <strong>&lt;html&gt;</strong><br> This tag will contain all our other HTML elements. <br><br>
+                
+                <strong>&lt;head&gt;</strong><br> This tag is located between the html and the body tag, and will contain metadata. This is essentially data about the HTML document that isn't displayed on the webpage. This will become clearer in a moment when we start adding other tags inside. <br><br>
+                
+                <strong>&lt;body&gt;</strong><br>Contains everything that will be displayed on the webpage.
+            </p>
+
+            <h3 id="head-tag">3. The &lt;head&gt; Tag</h3>
+            <p>As mentioned, the &lt;head&gt; tag contains data about our HTML file. One such type of data we want to provide is the character set we're using. Without this, the browser won't be able to display our page correctly. We can also give our webpage a title, which will be displayed in the browser window. <br><br>
+
+            Note: <meta> tags do no require a closing tag.
+            </p>
+
+            <div class="img-alert">
+                <img src="images/head-tag.png" alt="HTML file with meta and title tags inserted in the head.">
+            </div>
+
+            <p>Now save your document, and go the folder containing our index.html file. Right-click your file, then "Open with" and select your preferred web browser. <br><br>
+
+            You'll see that the browser tab at the top contains the text inside our &lt;title&gt; tag.
+            </p>
+
+            <h3 id="add-content">4. Adding Content</h3>
+            <p>This is where we can start adding our website content. Remember, this goes within the &lt;body&gt; tag. <br><br>
+
+            First of all we want to give our website a main heading. There are up to six heading types we can use for this. These range from &lt;h1&gt; through to &lt;h6&gt;, but it's not recommended to go further than &lt;h4&gt;. The &lt;h1&gt; tag is the highest level heading element and is often used for the main page title. The &lt;h2&gt; tag is primarily used for sub headings, and &lt;h3&gt; for sub headings within &lt;h2&gt; tags. <br><br>
+                
+            Think of what you want your main heading to be and insert this within a &lt;h1&gt; tag inside the &lt;body&gt;. 
+            </p>
+
+            <div class="img-alert">
+                <img src="images/heading.png" alt="The h1 tag gets inserted inside the body tag.">
+            </div>
+
+            <p>Now save your file again, and refresh the browser you opened the file up in. It should something like this:
+            </p>
+
+            <div class="img-alert">
+                <img src="images/browser-1.png" alt="A view of the HTML file in browser">
+            </div>
+
+            <p>Now add a &lt;h2&gt; underneath your &lt;h1&gt; element with 'About Me' written inside. We can also add a sentence to describe ourselves, written inside a &lt;p&gt; tag. <br><br></p>
+
+            <div class="img-alert">
+                <img src="images/para-tag.png" alt="The h2 and p tags go underneath the h1 tag">
+            </div>
+
+            <p>Save the file again, and reload your browser.</p>
+
+            <div class="img-alert">
+                <img src="images/browser-2.png" alt="A view of the updated HTML file in browser">
+            </div>
+
+            <h3 id="add-images">5. Adding Images</h3>
+            <p>To add images to our website, we use the &lt;img&gt; tag. The first thing we have to do, however, is make sure the image we want to use is inside our "My Website" folder.
+            </p> 
+
+            <div class="img-alert">
+                <img src="images/folder-view-2.png" alt="File containing our HTML file and our image">
+            </div>
+            
+            <p>Now the image is inside our "My Website" folder, we can use the &lt;img&gt; tag to reference it. We also need to include two attributes with our &lt;img&gt; tag: the first is the <em>src</em> attribute, which points to where the image file is located, and the second is the <em>alt</em> attribute, which is the text that will render if the image can't be loaded.</p>
+
+            <p>It's up to you where you want to insert your image, I'm going to put it just beneath our &lt;h1&gt; tag.</p>
+
+            <div class="img-alert">
+                <img src="images/img-tag.png" alt="Inserting the img tag">
+            </div>
+
+            <p>The <em>src</em> attribute contains path to our image file. In this case, the image file exists in the same folder as our index.html file so all we need to type in is the image file name.</p>
+
+            <p>The <em>alt</em> attribute is a short text description of what the image is. If the image can't load for some reason, this text will be displayed instead. It's what screen readers use to describe the image for those with visual impairments.</p>
+
+            <p>Save your index.html file again and reload the browser.</p>
+
+            <div class="img-alert">
+                <img src="images/browser-3.png" alt="Browser view of our website with the recently added image.">
+            </div>
+
+            <p>I've already pre-sized the image I'm using, so don't worry if your image appears huge in the browser - we can fix this with some CSS, which we'll look at in Part 2 of this tutorial.</p>
+
+            <p>Now it's time to take a breath and give yourself a big pat on the back - you've just finished coding the HTML for your first website! In Part 2 we're going to look at adding the CSS styling to bring our site to life.</p>
+
+            <p class="float-right"><a href="#">Part 2 Coming Next Week! &rarr;</a></p>
+            
+
+
+            <p>If this article was useful to you, let me know on <a href="https://twitter.com/jacobcollinsdev" target="_blank"><u><em>Twitter!</em></u></a><br>
+            <em>@jacobcollinsdev</em>.</p>
+
+
+           
+
+        </div>
+    </section>
+
+
+    <div class="topBtn"><i class="fas fa-chevron-up"></i></div>
+
+    <footer>
+        <p>Website designed by jacobcollins &copy; 2020</p>
+    </footer>
+
+    <script src="../../jquery-3.5.1.min.js"></script>
+    <script src="../../script.js"></script>
+    
+</body>
+</html>
