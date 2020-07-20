@@ -1,13 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-169634033-1"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-169634033-1');
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ=" crossorigin="anonymous" />
     <link rel="shortcut icon" type="image/x-icon" href="images/favicon.png">
-    <title>Build Your Own Website From Scratch (Part 1) | jacobcollinsdev</title>
-    <meta name="description" content="Jacob Collins is a Front-End Web Developer who designs and codes beautiful websites with clean user-interfaces.">
+    <title>Build Your Own Website From Scratch (Part 2) | jacobcollinsdev</title>
+    <meta name="description" content="Having built the structure of our website with HTML, we're now going to dive into the world of CSS to make it visually appealing.">
 </head>
 <body>
 
@@ -20,6 +28,8 @@
                 <span></span>
             </label>
     
+            <span class="spacer"></span>
+
             <nav>
                 <ul>
                     <li><a href="../../index.html#projects">Projects</a></li>
@@ -34,8 +44,8 @@
     <section class="blog-items">
         <div class="container">                    
             <h1>Build Your Own Website From Scratch Using HTML and CSS - Part 2</h1>
-            <h3>July 30th 2020</h3>
-            <img class="blog-banner" src="images/image2.png" alt="title-image">
+            <h3>July 20th 2020</h3>
+            <img class="blog-banner" src="images/title-part-2.jpg" alt="title-image">
 
             <p class="focus">In <a class="link" href="build-your-own-website-1.html">Part 1</a> of this tutorial, we built a very simple webpage using HTML. Now we're going to use CSS to give some visual appeal to our site and make it look great.</p>
             
@@ -44,15 +54,13 @@
                 <li><a href="#css-recap">CSS Recap</a></li>
                 <li><a href="#style-tag">1. Adding the &lt;style&gt; Tag</a></li>
                 <li><a href="#style-body">2. Styling the &lt;body&gt;</a></li>
-                <li><a href="#create-html-file">1. Creating the HTML File</a></li>
-                <li><a href="#setup-html">2. Setting up the HTML</a></li>
-                <li><a href="#head-tag">3. The &lt;head&gt; Tag</a></li>
-                <li><a href="#add-content">4. Adding Content</a></li>
-                <li><a href="#add-images">5. Adding Images</a></li>
+                <li><a href="#change-font">3. Changing Text Font and Size</a></li>
+                <li><a href="#style-img">4. Styling the Image</a></li>
+                <li><a href="#finish">Finishing Up</a></li>
             </ul>
 
             <h3 id="css-recap">CSS Recap</h3>
-            <p>Remember that CSS is a stylesheet lanuage and stands for "Cascading Style Sheets". This essentially means that the styles we apply "cascade" through the entire document and apply to all elements we've selected until they're overridden. <br><br>
+            <p>Remember that CSS is a stylesheet language and stands for "Cascading Style Sheets". This essentially means that the styles we apply "cascade" through the entire document and apply to all elements we've selected until they're overridden. <br><br>
             We declare our styles using <em>CSS rules</em>. These consist of a <em>selector</em>, a <em>property</em>, and a <em>value</em>. Let's have a look at the example for Part 1 again:
             </p>
 
@@ -68,13 +76,13 @@
             In this case, the <em>selector</em> is the <em>p</em> element. <br><br>
             The <em>property</em> we want to style is the <em>font-size</em>. <br><br>
             The <em>value</em> we want to assign to the font-size is <em>20px</em> (px is short for "pixels"). <br><br>
-            Now all our paragraph elements will have a font-size of 20px. There's so many properties that we can style with CSS and in this tutorial we are going to touch on the basics. If you're hungry for more, have a look at the resources listed at the end. <br><br>
+            Now all our paragraph elements will have a font-size of 20px. There's so many properties that we can style with CSS and in this tutorial we are going to touch on the basics. If you're hungry for more, I've linked a free online curriculum at the end for you to get your teeth into. <br><br>
             Now we've recapped CSS, let's get started styling the webpage we created in Part 1!
             </p> 
 
             <h3 id="style-tag">1. Adding the &lt;style&gt; Tag</h3>
-            <p>The first thing we need to do is add the &lt;style&gt; tag. This is one of a few ways to reference our styling declarations. Another way to do it would be to create a separate file named <em>style.css</em> and then link it to our HTML file, but for the purposes of this tutorial we are going to declare it all in our <em>index.html</em> document. <br><br>
-            The &lt;style&gt; tag goes inside our &lt;head&gt; tag as shown below:            
+            <p>The first thing we need to do is add the <code>&lt;style&gt;</code> tag. This is one of a few ways to reference our styling declarations. Another way to do it would be to create a separate file named <em>style.css</em> and then link it to our HTML file, but for the purposes of this tutorial we are going to declare it all in our <em>index.html</em> document. <br><br>
+            The <code>&lt;style&gt;</code> tag goes inside our <code>&lt;head&gt;</code> tag as shown below:            
             </p>
 
             <div class="img-alert">
@@ -82,11 +90,111 @@
             </div>
             
             <h3 id="style-body">2. Styling the &lt;body&gt;</h3>
-            <p>To get started, let's give our page background and text a different colour.</p>
+            <p>To get started, let's give our page background and text a different colour. To do this, we'll be using the <code>background-color</code> and <code>color</code> property (note the American English spelling). <br><br>
+            Remember how to create a style declaration: we need a <em>selector</em>, a <em>property</em>, and a <em>value</em>. <br><br>
+            In this case, we want to select the <code>&lt;body&gt;</code> element, and we want to style two different properties. For the <code>background-color</code> property, I'm going to use something called <em>hex code</em> which is one of a number of different colour coding formats. I won't go into detail on what is this and how it works here, but those of you hungry to learn can consider it as extra curricular work to find out. For now, you just need to know that using hex code allows us to use millions of colours as opposed to just a handful. To assign a colour to our text, I can just write <code>white</code> as the value for the <code>color</code> property, as we don't need to use hex code for simple colours.
+            </p>
+
+            <div class="img-alert">
+                <img src="images/part-2/body-styles.png" alt="Styling the body background and text colour.">
+            </div>
+
+            <p>You can use this <a class="link" href="https://htmlcolorcodes.com/">online hex colour picker</a> to help you choose the background colour you want for your site. Copy the code it gives you and use this as the value for <code>background-color</code>. <br><br>
+            Save the file and open it in your browser.
+            </p>
+
+            <div class="img-alert">
+                <img src="images/part-2/browser-1.jpg" alt="Browser view with background-color and color applied.">
+            </div>
+
+            <p>If your browser doesn't show the colours you've entered, double check the spelling. Remember to use "col<u>or</u>" and not "col<u>our</u>".</p>
+
+            <p>We can also use the <code>text-align</code> property to centre our page elements. Again, note the American English spelling "cent<u>er</u>".</p>
+
+            <div class="img-alert">
+                <img src="images/part-2/text-align.png" alt="Align page elements with text-align:center;">
+            </div>
+
+            <p>Once again, save and reload in your browser.</p>
+
+            <div class="img-alert">
+                <img src="images/part-2/browser-2.jpg" alt="Browser view of centred page elements.">
+            </div>
+
+            <h3 id="change-font">3. Changing Text Font and Size</h3>
+            <p>In order to use more exciting fonts, we first have to import them from an external library. I'm going to be using Google Fonts for this. Below are the instructions for importing the font style you want: </p>
+            <h3>Step 1</h3> 
+            <p>Head over to <a class="link" href="https://fonts.google.com/">Google Fonts</a> and find the fonts you like. I recommend choosing one font for your headings and another for your paragraph text. Select the font you want to use for the headings, and you'll be taken to the information page for that font.
+            </p>
+            <h3>Step 2</h3>
+            <p>Click "Select this style".</p>
+
+            <div class="img-alert">
+                <img src="images/part-2/fonts-1.jpg" alt="Adding fonts from Google Fonts">
+            </div>
+
+            <p>Go back to the Google Fonts homepage and select another font for your paragraph text in the same way you've just done.</p>
+
+            <h3>Step 3</h3>
+            <p>You should see your selected fonts appear on the right hand side of your browser window. Click "Embed" and then within this select "&commat;import".</p>
+
+            <div class="img-alert">
+                <img src="images/part-2/fonts-2.jpg" alt="Getting the import link from Google Fonts">
+            </div>
+
+            <p>We want to copy the code between the <code>&lt;style&gt;</code> tags and insert it at the top of our style declarations.</p>
+
+            <div class="img-alert">
+                <img src="images/part-2/import.png" alt="Inserting the import link into the style tag.">
+            </div>
+
+            <p>Now we can access these cool new fonts! <br><br>
+            To do this we use the <code>font-family</code> property, and pass the name of our font inside single quotation marks as the value. It's also good to add a back-up font-family in case the browser can't render your chosen font. This should be a simple font such as Arial, Helvetica, or Times New Roman to be sure that the browser can access it. Separate your first choice font from your back-up with a comma. <br><br>
+            I'm going to give all my <code>h1</code> and <code>h2</code> elements the 'Bangers' font, and all my <code>p</code> elements the 'Roboto' font. For both I'll give a back-up font of Arial. Since we're giving the <code>h1</code> and <code>h2</code> elements the same font-family, we don't need to create two separate CSS rules - we can simply write <code>h1, h2</code> as our selectors.
+            </p>
+
+            <div class="img-alert">
+                <img src="images/part-2/font-family.png" alt="Styling our text with font-family">
+            </div>
+
+            <p>Save and reload your browser.</p>
+
+            <div class="img-alert">
+                <img src="images/part-2/browser-3.jpg" alt="Viewing our font-styles in browser">
+            </div>
+
+            <p>To change your size of your text, use the <code>font-size</code> property. Most browsers use a default of 16px. Play around with different values for your <code>h1</code>, <code>h2</code>, and <code>p</code> elements.</p>
+
+            <div class="img-alert">
+                <img src="images/part-2/font-size.png" alt="Changing the default font-size">
+            </div>
+
+            <p>In the above code, I've added a font-size of 40px to our previously declared rule for the <code>h1</code> and <code>h2</code> elements, then below I've created a new rule specifying a smaller font size of 32px for <code>h2</code> elements. When the browser reads the first rule, it will apply a font size of 40px to all <code>h1</code> and <code>h2</code> elements. When it reads the newly declared <code>h2</code> rule underneath, it will override the previously declared font size of 40px and apply the new value of 32px. Finally, I added another rule to set a font size of 20px for our <code>p</code> elements.</p>
+
+            <h3 id="style-img">4. Styling the Image</h3>
+            <p>There are a number of things we can do with our image. We can change its size using the <code>height</code> and <code>width</code> properties. We can also round the corners of the image to make it less square.</p>
+            <p>Select the image tag using <code>img</code>, then set a value for it's <code>height</code> (I'm going to set a height of 500px but you can experiment around with higher and lower values). <br><br> 
+            Save and reload your browser. Notice that the browser automatically scaled up the width of the image even though we only set the height property. <br><br>
+            Now to change the rounding of the corners of the image, we're going to use the <code>border-radius</code> property and set a value in either pixels or percentages. The higher the value, the more rounded the corners will be. If you set a value as a percentage, the maximum you can use is 50%. There is a difference in how the code is interpreted depending on whether you use pixels or percentages. Have a go at both and see if you can pin-point what it is.
+            </p>
+
+            <div class="img-alert">
+                <img src="images/part-2/img-style.png" alt="Styling the image">
+            </div>
             
+            <p>Save the file and reload your browser.</p>
+
+            <div class="img-alert">
+                <img src="images/part-2/browser-4.jpg" alt="Browser view of our styled image.">
+            </div>
+
+            <h3 id="finish">Finishing Up</h3>
+            <p>That's it! You've just created your very first website. Feel free to play around and add some more content with HTML and then style it up afterwards with CSS. You could have a go at changing the colour of the heading and paragraph elements for example.<br><br>
+            This has been a surface level introduction to how websites are created, showing you how we can structure and add content with HTML tags, and style specific elements with CSS. If you're hungry for more, I recommend you take on freeCodeCamp's online curriculum. Start with the <em>Responsive Web Design Certification</em>, which you can access <a class="link" href="https://www.freecodecamp.org/learn" target="_blank">here</a>. This will give you a thorough grounding in HTML and CSS, and you'll get the chance to build loads of projects along the way. 
+            </p>         
 
 
-            <p>If this article was useful to you, let me know on <a href="https://twitter.com/jacobcollinsdev" target="_blank"><u><em>Twitter!</em></u></a><br>
+            <p>If this article was useful to you, let me know on <a class="link" href="https://twitter.com/jacobcollinsdev" target="_blank"><u>Twitter!</u></a><br>
             <em>@jacobcollinsdev</em>.</p>
 
 

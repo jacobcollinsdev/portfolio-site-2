@@ -543,26 +543,48 @@ footer p{
     display:inline-block; */
 }
 
-code{
+.code code{
     font-size:1.2rem;
+}
+
+iframe{
+    border:0;
 }
 
 @media screen and (min-width:800px){
 
     .nav-container{
-        display:grid;
-        grid-template-columns: auto 1fr auto;
+        display:flex;
+        flex-direction: row;
+        /* grid-template-columns: auto 1fr auto;
+        display:-ms-grid;
+        -ms-grid-columns: auto 1fr auto; */
+        position: relative;
+        width:100%;
     }
+
 
     .nav-toggle-label{
         display:none;
     }
 
     nav {
-        all:unset;
+        /* all:unset; */
         display:flex;
         justify-self: flex-end;
         align-items: center;
+        position: static;
+        transform:scale(1,1);
+        /* border:2px solid red; */
+        width:20%;
+    }
+
+    .spacer{
+        width:60%;
+    }
+
+    .logo{
+        width:20%
     }
 
     nav ul{
@@ -611,6 +633,8 @@ code{
         display:grid;
         grid-template-columns: 1fr 1fr;
         gap: 1em;
+        /* display:-ms-grid;
+        -ms-grid-columns: 1fr 1fr; */
     }
 
     .project-example__container a img{
@@ -669,7 +693,7 @@ code{
         text-align: right!important;
     }
 
-    code{
+    .code code{
         font-size:1.4rem;
     }
 
